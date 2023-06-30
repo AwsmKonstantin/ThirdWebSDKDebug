@@ -1,0 +1,21 @@
+{
+    "name": "Web3",
+    "rootNamespace": "",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:10ebc479cc081044d87faf0f7bd87988",
+        "GUID:6289847961d974c97ac0374e9d79d059",
+        "GUID:9160cf3ea7468fb4289a9f2ab3d51131",
+        "GUID:537c66ab619ea034fb67f703efea6bd4",
+        "GUID:f0a9b1d630b8e1741bf6b7e43a1eab7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

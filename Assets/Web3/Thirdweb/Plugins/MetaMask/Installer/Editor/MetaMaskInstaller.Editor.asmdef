@@ -1,0 +1,19 @@
+{
+    "name": "MetaMaskInstaller.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:10ebc479cc081044d87faf0f7bd87988",
+        "GUID:3513ea5c824fc593ea171a16bf06a251"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
