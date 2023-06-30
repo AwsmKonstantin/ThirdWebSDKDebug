@@ -31,7 +31,7 @@ namespace Thirdweb
                     continue;
                 }
                 // if value type, convert to string otherwise serialize to json
-                if (args[i].GetType().IsPrimitive || args[i] is string || args[i] is BigInteger)
+                if (args[i].GetType().IsPrimitive || args[i] is string)// || args[i] is BigInteger)
                 {
                     stringArgs.Add(args[i].ToString());
                 }

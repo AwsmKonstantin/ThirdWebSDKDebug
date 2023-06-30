@@ -166,7 +166,7 @@ namespace Thirdweb
             if (Utils.IsWebGLBuild())
             {
                 args = args ?? new object[0];
-                return await Bridge.InvokeRoute<TransactionResult>(getRoute("call"), Utils.ToJsonStringArray(functionName, Utils.ToJsonStringArray(args), transactionOverrides));
+                return await Bridge.InvokeRoute<TransactionResult>(getRoute("call"), Utils.ToJsonStringArray(functionName, args, transactionOverrides));
             }
             else
             {

@@ -33,10 +33,12 @@ public class TestScript : MonoBehaviour
         Debug.Log("Starting test");
         var trade =  JsonConvert.DeserializeObject<DataDTO>(sampleData.text);
         Debug.Log("Deserialized sample");
+        Debug.Log("Will coneect to chain id: "+ThirdwebManager.Instance.chain);
         var chainData = GetChainData();
-        string address = await ThirdwebManager.Instance.SDK.wallet.Connect(
-            new WalletConnection(WalletProvider.Metamask, int.Parse(chainData.chainId))
-        );
+        Debug.Log("Got chain data");
+        var wal = ThirdwebManager.Instance.SDK.wallet;
+        var conn = new WalletConnection(WalletProvider.Metamask, int.Parse(chainData.chainId));
+        string address = await wal.Connect(conn);
         Debug.Log("Connected to wallet "+address);
         Thirdweb.Contract con = new Thirdweb.Contract(chainData.chainId, trade.contractAddress, trade.abi);
 
@@ -55,6 +57,6 @@ public class TestScript : MonoBehaviour
     }
     
     public ChainData GetChainData() {
-        return ThirdwebManager.Instance.supportedChains.Find((x)=>x.chainId == ThirdwebManager.Instance.chain);
+        return ThirdwebManager.Instance.supportedChains.Find((x)=>x.identifier == ThirdwebManager.Instance.chain);
     }
 }
